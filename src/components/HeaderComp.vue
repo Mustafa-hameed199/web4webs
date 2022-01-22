@@ -36,7 +36,7 @@
                             ><a @click="bgMove">color</a></router-link
                         >
                         <li @mouseenter="menuBtnOn" @mouseleave="menuBtnOff">
-                            <a href="#" class="menu-btn" @click.prevent="bgMove"
+                            <a href="#" class="menu-btn" @click.prevent
                                 >other <i class="fas fa-angle-down"></i
                             ></a>
                             <ul class="nav__menu">
@@ -159,7 +159,6 @@ export default {
             const links = document.querySelectorAll(".nav__ul > * > a");
             links.forEach((el) => el.classList.remove("active"));
             if (e.target.classList.contains("btn")) {
-                console.log(e.target);
                 links[0].classList.add("active");
                 this.navIcon();
                 this.bgPos(e);
