@@ -1,0 +1,40 @@
+/* 👉👉👉👉👉👉👉👉👉👉👉👉  Common Style  👈👈👈👈👈👈 */
+body { background-color: $section_bg_clr }
+
+section { 
+    min-height: 100vh;
+    padding: $main_padding 0;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    text-align: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize; 
+
+    a {
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        
+        color: #111;
+        background: $section_bg_clr;
+        box-shadow: 3px 3px 6px $shadow_clr,
+                    -4px -4px 5px $inset_shadow;
+        transition: .2s ease;
+
+        &:hover {
+            box-shadow: inset 4px 4px 5px $shadow_clr,
+                        inset -5px -5px 5px $inset_shadow;
+            transform: scale(.9);
+        }
+    }
+
+}
