@@ -5,7 +5,7 @@
                 <a
                     href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
                     target="_blank"
-                    >normlaize
+                    >normalize
                     <i
                         style="padding: 0.2rem; color: white; background: red"
                         class="fas fa-bolt"

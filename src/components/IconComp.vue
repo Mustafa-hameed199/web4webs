@@ -15,7 +15,6 @@
                 <a href="https://feathericons.com/" target="_blank">Feather </a>
                 <a href="https://heroicons.dev/" target="_blank">hero</a>
                 <a href="https://css.gg/" target="_blank">css.gg</a>
-                <a href="https://css.gg/" target="_blank">css.gg</a>
                 <a href="https://iconhub.io/" target="_blank">iconhub</a>
                 <a href="https://iconstore.co/" target="_blank">iconstore</a>
                 <a href="https://icons.mono.company/" target="_blank"
