@@ -17,6 +17,14 @@
                 <a href="https://justremote.co/" target="_blank"> justremote</a>
                 <a href="https://remote.co/" target="_blank"> remote</a>
                 <a href="https://remote.work/" target="_blank"> remote.work</a>
+                <a href="https://www.turing.com/" target="_blank"> turing</a>
+                <a href="https://working-nomads.com/" target="_blank">
+                    working nomads</a
+                >
+                <a href="https://www.flexjobs.com/" target="_blank">
+                    flexjobs
+                </a>
+                <a href="https://www.indeed.com/" target="_blank"> indeed </a>
             </div>
         </div>
     </section>

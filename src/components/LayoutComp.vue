@@ -93,6 +93,9 @@
                     >svg backgrounds</a
                 >
                 <a href="https://www.svgeez.com/" target="_blank">svg eez</a>
+                <a href="http://gizma.com/easing/" target="_blank"
+                    >ease functions</a
+                >
             </div>
         </div>
     </section>

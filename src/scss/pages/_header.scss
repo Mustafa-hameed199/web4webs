@@ -94,8 +94,7 @@ header {
     left: 0;
     top: 0;
     height: 100vh;
-    width: 70%;
-    max-width: 300px;
+    width: min(70% , 300px);
 
     background: $black_clr;
     transition: all 1s ease;
@@ -131,7 +130,7 @@ header {
         > * {
             @include bpTo(mobile) {
                 display: block;
-                padding: 1.5rem 0;
+                padding: 0.5rem 0;
             }
             display: block;
             font-size: 1.2rem;

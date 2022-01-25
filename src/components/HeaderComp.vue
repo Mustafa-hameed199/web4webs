@@ -106,7 +106,7 @@
                                         v-on:click="navIcon"
                                         @click="menuBtnOff"
                                     >
-                                        hosting</a
+                                        host & domain</a
                                     ></router-link
                                 >
                                 <router-link tag="li" to="remote_job"

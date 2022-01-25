@@ -34,6 +34,19 @@
                     >hongkiat</a
                 >
                 <a href="https://www.mockplus.com/" target="_blank">mockplus</a>
+                <a href="https://freehtml5.co/" target="_blank">freehtml5</a>
+                <a href="https://www.styleshout.com/" target="_blank"
+                    >styleshout</a
+                >
+                <a href="https://athemes.com/" target="_blank">athemes</a>
+                <a href="https://startbootstrap.com/" target="_blank"
+                    >startbootstrap</a
+                >
+                <a
+                    href="https://feedreader.com/observe/html5xcss3.com"
+                    target="_blank"
+                    >html5xcss3</a
+                >
                 <a href="https://monsterspost.com/" target="_blank"
                     >monsterspost</a
                 >
