@@ -56,64 +56,56 @@
                     >UI Faces</a
                 >
             </div>
-            <div class="svg">
-                <div class="box">
-                    <h3>svg & illustration</h3>
-                    <a href="https://undraw.co/illustrations" target="_blank"
-                        >unDraw</a
-                    >
-                    <a href="https://www.svgrepo.com/" target="_blank"
-                        >svgrepo</a
-                    >
-                    <a href="https://svgwave.in/" target="_blank"> svgwave </a>
-                    <a href="https://getwaves.io/" target="_blank">Get Waves</a>
-                    <a href="https://www.shapedivider.app/" target="_blank"
-                        >Shape Divider</a
-                    >
-                    <a href="https://getavataaars.com/" target="_blank"
-                        >Avatart generator</a
-                    >
-                    <a href="https://storyset.com/" target="_blank">storyset</a>
-                    <a href="https://drawkit.com/" target="_blank">drawkit</a>
-                    <a href="https://usesmash.com/" target="_blank">usesmash</a>
-                    <a href="https://stubborn.fun/" target="_blank">stubborn</a>
-                    <a href="https://elements.envato.com/" target="_blank">
-                        envato
-                    </a>
-                    <a
-                        href="https://www.artstation.com/?sort_by=community"
-                        target="_blank"
-                    >
-                        artstation
-                    </a>
-                    <a href="https://icons8.com/" target="_blank"
-                        >icons 8
-                        <img
-                            src="../assets/images/perfectato.png"
-                            class="icons8_hand"
-                    /></a>
-                    <a href="https://www.humaaans.com/" target="_blank"
-                        >humaaans</a
-                    >
-                    <a href="https://www.freellustrations.com/" target="_blank"
-                        >freellustrations</a
-                    >
-                    <a href="https://blush.design/" target="_blank">blush</a>
-                    <a href="https://www.opendoodles.com/" target="_blank"
-                        >opendoodles</a
-                    >
-                    <a
-                        href="https://products.ls.graphics/paaatterns/"
-                        target="_blank"
-                        >paaatterns</a
-                    >
-                    <a href="https://iradesign.io/" target="_blank"
-                        >iradesign</a
-                    >
-                    <a href="https://www.manypixels.co/" target="_blank"
-                        >manypixelsf</a
-                    >
-                </div>
+            <h2 class="content-title">svg & illustration</h2>
+            <div class="box">
+                <a href="https://undraw.co/illustrations" target="_blank"
+                    >unDraw</a
+                >
+                <a href="https://www.svgrepo.com/" target="_blank">svgrepo</a>
+                <a href="https://svgwave.in/" target="_blank"> svgwave </a>
+                <a href="https://getwaves.io/" target="_blank">Get Waves</a>
+                <a href="https://www.shapedivider.app/" target="_blank"
+                    >Shape Divider</a
+                >
+                <a href="https://getavataaars.com/" target="_blank"
+                    >Avatart generator</a
+                >
+                <a href="https://storyset.com/" target="_blank">storyset</a>
+                <a href="https://drawkit.com/" target="_blank">drawkit</a>
+                <a href="https://usesmash.com/" target="_blank">usesmash</a>
+                <a href="https://stubborn.fun/" target="_blank">stubborn</a>
+                <a href="https://elements.envato.com/" target="_blank">
+                    envato
+                </a>
+                <a
+                    href="https://www.artstation.com/?sort_by=community"
+                    target="_blank"
+                >
+                    artstation
+                </a>
+                <a href="https://icons8.com/" target="_blank"
+                    >icons 8
+                    <img
+                        src="../assets/images/perfectato.png"
+                        class="icons8_hand"
+                /></a>
+                <a href="https://www.humaaans.com/" target="_blank">humaaans</a>
+                <a href="https://www.freellustrations.com/" target="_blank"
+                    >freellustrations</a
+                >
+                <a href="https://blush.design/" target="_blank">blush</a>
+                <a href="https://www.opendoodles.com/" target="_blank"
+                    >opendoodles</a
+                >
+                <a
+                    href="https://products.ls.graphics/paaatterns/"
+                    target="_blank"
+                    >paaatterns</a
+                >
+                <a href="https://iradesign.io/" target="_blank">iradesign</a>
+                <a href="https://www.manypixels.co/" target="_blank"
+                    >manypixelsf</a
+                >
             </div>
         </div>
     </section>
@@ -126,17 +118,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.svg {
-    margin-top: 4rem;
-
-    .icons8_hand {
-        transform: rotate(-90deg);
-        width: 40px;
-    }
-}
-.svg h3 {
-    word-break: break-word;
-    grid-column: 1/-1;
-    font-size: clamp(2rem, 1rem + 3vw, 3rem);
+.icons8_hand {
+    transform: rotate(-90deg);
+    width: 40px;
 }
 </style>
