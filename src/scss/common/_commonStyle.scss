@@ -25,13 +25,13 @@ section {
     margin-bottom: 2rem;
 
     a {
-        padding: 1rem 1.5rem;
-        border-radius: 5px;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        position: relative;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
         
         color: #111;
         background: $section_bg_clr;

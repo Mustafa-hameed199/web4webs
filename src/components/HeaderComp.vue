@@ -17,106 +17,44 @@
                         <span></span>
                         <span></span>
                     </div>
+                    <!------------------------------------------------------- Main Links ------------------>
                     <ul class="nav__ul">
-                        <router-link exact tag="li" to="/"
-                            ><a class="active" @click="bgMove"
-                                >home</a
-                            ></router-link
+                        <li
+                            v-for="(mLink, index) in mainLinks"
+                            :key="index"
+                            :data-name="mLink"
+                            @click="
+                                navIcon();
+                                linksBgMove(mLink);
+                            "
                         >
-                        <router-link tag="li" to="/picture"
-                            ><a @click="bgMove">picture</a></router-link
-                        >
-                        <router-link tag="li" to="/icon"
-                            ><a @click="bgMove">icon</a></router-link
-                        >
-                        <router-link tag="li" to="/font"
-                            ><a @click="bgMove">font</a></router-link
-                        >
-                        <router-link tag="li" to="/color"
-                            ><a @click="bgMove">color</a></router-link
-                        >
+                            <router-link
+                                :to="index == 0 ? '/' : mLink"
+                                :exact="index == 0"
+                            >
+                                {{ mLink }}
+                            </router-link>
+                        </li>
                         <li @mouseenter="menuBtnOn" @mouseleave="menuBtnOff">
                             <a href="#" class="menu-btn" @click.prevent
                                 >other <i class="fas fa-angle-down"></i
                             ></a>
+                            <!------------------------------------------------------- Menu Links ------------------>
                             <ul class="nav__menu">
-                                <router-link tag="li" to="layout"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        layout</a
-                                    ></router-link
+                                <li
+                                    v-for="(link, index) in menuLinks"
+                                    :key="index"
+                                    :data-name="link"
+                                    @click="
+                                        menuBtnOff();
+                                        navIcon();
+                                        linksBgMove(link);
+                                    "
                                 >
-                                <router-link tag="li" to="template"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        template</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="practice"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        practice</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="problem_solving"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        problem solving</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="animation"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        animation</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="reference"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        reference</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="useful_web"
-                                    ><a v-on:click="bgMove" @click="menuBtnOff">
-                                        useful web</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="web_inspire"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        web inspire</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="hosting"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        host & domain</a
-                                    ></router-link
-                                >
-                                <router-link tag="li" to="remote_job"
-                                    ><a
-                                        v-on:click="navIcon"
-                                        @click="menuBtnOff"
-                                    >
-                                        remote job</a
-                                    ></router-link
-                                >
+                                    <router-link :to="link" v-fixName>
+                                        {{ link }}
+                                    </router-link>
+                                </li>
                             </ul>
                         </li>
                         <div class="links__bg"></div>
@@ -134,18 +72,29 @@ export default {
         return {
             mobileWidth: null,
             windowWidth: null,
+            mainLinks: ["home", "picture", "icon", "font", "color"],
+            menuLinks: [
+                "layout",
+                "template",
+                "practice",
+                "problem_solving",
+                "animation",
+                "reference",
+                "useful_web",
+                "web_inspire",
+                "hosting",
+                "remote_job",
+            ],
         };
     },
     // -------------------------------- Links bg & Media icon ------------------
     created() {
-        window.addEventListener("DOMContentLoaded", this.resizeLinksBg);
-        window.addEventListener("reload", this.resizeLinksBg);
         window.addEventListener("resize", () => {
-            this.resizeLinksBg();
             this.checkScreen();
+            this.fixBgLinks();
         });
-        this.resizeLinksBg();
         this.checkScreen();
+        this.fixBgLinks();
     },
     methods: {
         menuBtnOn() {
@@ -154,56 +103,46 @@ export default {
         menuBtnOff() {
             document.querySelector(".menu-btn").classList.remove("show");
         },
-        // -------------------------------- Links on click Bg ------------------
-        bgMove(e) {
-            const links = document.querySelectorAll(".nav__ul > * > a");
-            links.forEach((el) => el.classList.remove("active"));
-            if (e.target.classList.contains("btn")) {
-                links[0].classList.add("active");
-                this.navIcon();
-                this.bgPos(e);
-                return;
-            }
-            this.navIcon();
-            e.target.classList.add("active");
-            this.bgPos(e);
-        },
-        bgPos(e) {
-            let element = e.target;
-            let menuLinks = [
-                ...document.querySelectorAll(".nav__menu > * > *"),
-            ];
-            if (menuLinks.includes(element)) {
+        // -------------------------------- Move bg links on click  ------------------
+        linksBgMove(link) {
+            let mover = document.querySelector(".links__bg");
+            let element = document.querySelector(`[data-name=${link}]`);
+            let allLinks = document.querySelectorAll(".nav li, .nav a");
+            allLinks.forEach((li) => li.classList.remove("bg-active"));
+            if (element.parentElement.classList.contains("nav__menu"))
                 element = document.querySelector(".menu-btn");
-            }
+            element.classList.add("bg-active");
 
-            let w = element.getBoundingClientRect().width;
             let h = element.getBoundingClientRect().height;
+            let w = element.getBoundingClientRect().width;
             let l = element.offsetLeft;
-            let bg = document.querySelector(".links__bg");
 
-            bg.style.width = w + "px";
-            bg.style.height = h + "px";
-            bg.style.left = l + "px";
+            mover.style.height = h + "px";
+            mover.style.width = w + "px";
+            mover.style.left = l + "px";
         },
-        resizeLinksBg() {
-            if (document.querySelector(".nav__ul > * > .active")) {
-                let el = document.querySelector(".nav__ul > * > .active");
-                let w = el.getBoundingClientRect().width;
-                let h = el.getBoundingClientRect().height;
-                let l = el.offsetLeft;
+        // -------------------------------- Fix Bg Links on resize or reload ------------------
+        fixBgLinks() {
+            if (!document.querySelector(".bg-active")) return;
+            let mover = document.querySelector(".links__bg");
+            let element = document.querySelector(".bg-active");
 
-                let bg = document.querySelector(".links__bg");
-                bg.style.width = w + "px";
-                bg.style.height = h + "px";
-                bg.style.left = l + "px";
-            }
+            let h = element.getBoundingClientRect().height;
+            let w = element.getBoundingClientRect().width;
+            let l = element.offsetLeft;
+
+            mover.style.height = h + "px";
+            mover.style.width = w + "px";
+            mover.style.left = l + "px";
         },
         // -------------------------------- Check for mobile screen ------------------
         checkScreen() {
             this.windowWidth = window.innerWidth;
             if (this.windowWidth < 768) {
                 this.mobileWidth = true;
+                let icon = document.querySelector(".nav__icon");
+                if (icon.classList.contains("show"))
+                    icon.classList.remove("show");
                 return;
             }
             this.mobileWidth = false;
@@ -215,8 +154,14 @@ export default {
             } else {
                 links.forEach((el) => el.classList.remove("active"));
                 links[links.length - 1].classList.add("active");
-                this.resizeLinksBg();
             }
+        },
+    },
+    directives: {
+        fixName: {
+            bind: function (el) {
+                return (el.innerHTML = el.innerHTML.split("_").join(" "));
+            },
         },
     },
 };
