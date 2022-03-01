@@ -87,7 +87,6 @@ export default {
             ],
         };
     },
-    // -------------------------------- Links bg & Media icon ------------------
     created() {
         window.addEventListener("resize", () => {
             this.checkScreen();
