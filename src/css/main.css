@@ -288,11 +288,8 @@ header {
     width: 100%;
     text-align: center;
   }
-  .nav__ul > *.router-link-active, .nav__ul > *:hover {
-    color: #2a72b1;
-  }
 }
-.nav__ul > * > * {
+.nav__ul > * > a {
   display: block;
   font-size: 1.2rem;
   padding: 1rem;
@@ -300,9 +297,12 @@ header {
   transition: 0.3s ease;
 }
 @media (max-width: 767px) {
-  .nav__ul > * > * {
+  .nav__ul > * > a {
     display: block;
     padding: 1.5rem 0;
+  }
+  .nav__ul > * > a.router-link-active, .nav__ul > * > a:hover {
+    color: #2a72b1;
   }
 }
 
@@ -372,19 +372,11 @@ header {
   display: block;
   border: 1px solid transparent;
 }
-.nav__menu li a:hover {
+.nav__menu li a.router-link-active, .nav__menu li a:hover {
   border: 1px solid white;
 }
 @media (max-width: 767px) {
-  .nav__menu li a:hover {
-    border: 1px solid black;
-  }
-}
-.nav__menu li.router-link-active {
-  border: 1px solid white;
-}
-@media (max-width: 767px) {
-  .nav__menu li.router-link-active {
+  .nav__menu li a.router-link-active, .nav__menu li a:hover {
     border: 1px solid black;
   }
 }

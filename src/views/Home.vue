@@ -28,11 +28,5 @@
 <script>
 export default {
     name: "home",
-    methods: {
-        firstLink() {
-            let bg = document.querySelector(".links__bg");
-            console.log(bg);
-        },
-    },
 };
 </script>

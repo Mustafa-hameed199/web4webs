@@ -26,38 +26,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.loader {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    transition: opacity 0.5s;
-    background: #cfe4e9;
-    background: #1c272a;
-    display: grid;
-    place-items: center;
-    div {
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 10%;
-            background: linear-gradient(to top, #1c272a, transparent);
-        }
-    }
-    &.hide {
+.fade-in {
+    &-enter-from,
+    &-leave-to {
         opacity: 0;
     }
-}
-
-.fade-in-leave-to,
-.fade-in-enter-from {
-    opacity: 0;
-}
-.fade-in-leave-active,
-.fade-in-enter-active {
-    transition: 0.2s ease;
+    &-leave-active,
+    &-enter-active {
+        transition: 0.2s ease-out;
+    }
 }
 </style>

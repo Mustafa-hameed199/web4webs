@@ -37,7 +37,7 @@
                         </li>
                         <li @mouseenter="menuBtnOn" @mouseleave="menuBtnOff">
                             <a href="#" class="menu-btn" @click.prevent
-                                >other <i class="fas fa-angle-down"></i
+                                >more <i class="fas fa-angle-down"></i
                             ></a>
                             <!------------------------------------------------------- Menu Links ------------------>
                             <ul class="nav__menu">

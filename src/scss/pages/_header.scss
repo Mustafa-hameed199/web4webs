@@ -120,14 +120,14 @@ header {
         @include bpTo(mobile) {
             width: 100%;
             text-align: center;
-            &.router-link-active,
-            &:hover { color: $links_hover_clr }
         }
         
-        > * {
+        > a {
             @include bpTo(mobile) {
                 display: block;
                 padding: 1.5rem 0;
+                &.router-link-active,
+                &:hover { color: $links_hover_clr }
             }
             display: block;
             font-size: 1.2rem;
@@ -196,14 +196,11 @@ header {
             transition: .5s ease;
             display: block;
             border: 1px solid transparent;
+            &.router-link-active,
             &:hover {
                 border: 1px solid white;
                 @include bpTo(mobile) { border: 1px solid black }
             }
-        }
-        &.router-link-active {
-            border: 1px solid white;
-            @include bpTo(mobile) { border: 1px solid black }
         }
     }
 }
