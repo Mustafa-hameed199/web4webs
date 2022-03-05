@@ -57,10 +57,14 @@
                                 </li>
                             </ul>
                         </li>
+                        <!------------------------------------------------------- Change Mode ------------------>
                         <div class="links__bg"></div>
                     </ul>
                 </nav>
             </div>
+        </div>
+        <div class="mode">
+            <div class="mode__btn" @click="changeMode"></div>
         </div>
     </header>
 </template>
@@ -154,6 +158,37 @@ export default {
                 links.forEach((el) => el.classList.remove("active"));
                 links[links.length - 1].classList.add("active");
             }
+        },
+        // -------------------------------- change theme ---------------
+        changeMode(e) {
+            let root = document.querySelector("html");
+            if (!e.target.classList.contains("dark")) {
+                e.target.classList.add("dark");
+                root.style.cssText = `
+                --white_clr: black;
+                --black_clr: var(--text_clr);
+                --section_bg_clr: #252526;
+                --text_clr: rgba(255 255 255 / .65);
+                --home_img_shadow: 8px 8px 8px rgba(0 0 0 /.4); 
+
+                --items_shadow:  .25rem .25rem .5rem rgba(0 0 0 / 0.3), 
+                                    -.25rem -.25rem .5rem rgba(255 255 255 / 0.035);
+
+                --items_shadow_hover: inset .25rem .25rem .5rem rgba(0 0 0 / 0.3), 
+                                        inset -.25rem -.25rem .5rem rgba(255 255 255 / 0.035);`;
+                return;
+            }
+            e.target.classList.remove("dark");
+            root.style.cssText = `
+                --white_clr: white;
+                --black_clr: black;
+                --section_bg_clr: #ccc;
+                --text_clr: var(--black_clr);
+                --home_img_shadow: 8px 8px 8px rgba(0 0 0 /0.4);
+            
+                --items_shadow: 0.25rem 0.25rem 0.5rem #aaa, -0.25rem -0.25rem 0.5rem #eee;
+            
+                --items_shadow_hover: inset 0.25rem 0.25rem 0.5rem #aaa, inset -0.25rem -0.25rem 0.5rem #eee;`;
         },
     },
     directives: {

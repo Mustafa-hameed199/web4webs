@@ -1,7 +1,19 @@
-$section_bg_clr: #e0e5ec;
-$links_hover_clr: #2a72b1;
-$black_clr: #191814;
-$shadow_clr: rgba(163,177,198,.8);
-$inset_shadow: rgba(#ffffff, .45);
+$mode: light; // (light) if you change any letter of this variable or put another word, the mode going to dark
+:root {
+    --main_clr: #2a72b1;
+    --nav_menu_bg_clr_mobile: rgba(255, 255, 255, 0.5);
+    --nav_menu_bg_clr: rgba(0, 0, 0, 0.75);
+    --nav_ul_mobil_bg_clr: #101010;
 
-$main_padding: 100px;
+    --white_clr: white;
+    --black_clr: black;
+    --section_bg_clr: #ccc;
+    --text_clr: var(--black_clr);
+    --home_img_shadow: 8px 8px 8px rgba(0 0 0 /0.4);
+
+    --items_shadow: 0.25rem 0.25rem 0.5rem #aaa, -0.25rem -0.25rem 0.5rem #eee;
+
+    --items_shadow_hover: inset 0.25rem 0.25rem 0.5rem #aaa, inset -0.25rem -0.25rem 0.5rem #eee;
+
+    --main_padding: 100px;
+}

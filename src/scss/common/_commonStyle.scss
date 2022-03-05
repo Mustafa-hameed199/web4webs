@@ -1,9 +1,9 @@
 /* 👉👉👉👉👉👉👉👉👉👉👉👉  Common Style  👈👈👈👈👈👈 */
-body { background-color: $section_bg_clr }
+body { background-color: var(--section_bg_clr) }
 
 section { 
     min-height: 100vh;
-    padding: $main_padding 0;
+    padding: var(--main_padding) 0;
 }
 
 .content-title {
@@ -12,6 +12,7 @@ section {
     text-align: center;
     margin-bottom: 2rem;
     word-break: break-word;
+    color: var(--text_clr);
 }
 
 .box {
@@ -33,16 +34,15 @@ section {
         padding: 1rem 1.5rem;
         border-radius: 5px;
         
-        color: #111;
-        background: $section_bg_clr;
-        box-shadow: 3px 3px 6px $shadow_clr,
-                    -4px -4px 5px $inset_shadow;
-        transition: .2s ease;
+        color: var(--text_clr);
+        background: var(--section_bg_clr);
+        box-shadow: var(--items_shadow);
+
+        transition: .25s cubic-bezier(.34,.8,.66,1.48);
 
         &:hover {
-            box-shadow: inset 4px 4px 5px $shadow_clr,
-                        inset -5px -5px 5px $inset_shadow;
-            transform: scale(.9);
+            box-shadow: var(--items_shadow_hover);
+            transform: scale(.85);
         }
     }
 }
