@@ -41,22 +41,3 @@
         }
     }
 }
-
-// check fo dark and light mode
-// @mixin checkMode($value) {
-//     @if $value == light {
-//         @content;
-//     } @else {
-//         --white_clr: black;
-//         --black_clr: var(--text_clr);
-//         --section_bg_clr: #252526;
-//         --text_clr: rgba(255 255 255 / .65);
-//         --home_img_shadow: 8px 8px 8px rgba(0 0 0 /.4); 
-    
-//         --items_shadow:  .25rem .25rem .5rem rgba(0 0 0 / 0.3), 
-//                             -.25rem -.25rem .5rem rgba(255 255 255 / 0.035);
-        
-//         --items_shadow_hover: inset .25rem .25rem .5rem rgba(0 0 0 / 0.3), 
-//                                 inset -.25rem -.25rem .5rem rgba(255 255 255 / 0.035);;
-//     }
-// }
