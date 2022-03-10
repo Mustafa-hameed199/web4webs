@@ -25,6 +25,29 @@
                     flexjobs
                 </a>
                 <a href="https://www.indeed.com/" target="_blank"> indeed </a>
+                <a href="https://www.jora.com/" target="_blank">jora </a>
+                <a href="https://himalayas.app/" target="_blank"> himalayas </a>
+                <a href="https://www.localwise.com/" target="_blank">
+                    localwise
+                </a>
+                <a href="https://talent.hubstaff.com/" target="_blank">
+                    hubstaff
+                </a>
+                <a href="https://remoters.net/jobs/companies/technology/" target="_blank">
+                    remoters
+                </a>
+                <a
+                    href="https://github.com/search?q=remote+job&type="
+                    target="_blank"
+                >
+                    github remote
+                </a>
+                <a
+                    href="https://www.ryrob.com/remote-jobs-websites/#general"
+                    target="_blank"
+                >
+                    62 website for job
+                </a>
             </div>
         </div>
     </section>
