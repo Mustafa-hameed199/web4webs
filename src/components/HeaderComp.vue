@@ -57,12 +57,12 @@
                                 </li>
                             </ul>
                         </li>
-                        <!------------------------------------------------------- Change Mode ------------------>
                         <div class="links__bg"></div>
                     </ul>
                 </nav>
             </div>
         </div>
+        <!------------------------------------------------------- Change Mode ------------------>
         <div class="mode">
             <div class="mode__btn" @click="changeMode"></div>
         </div>
@@ -88,6 +88,7 @@ export default {
                 "web_inspire",
                 "hosting",
                 "remote_job",
+                "cheatsheet",
             ],
         };
     },

@@ -56,6 +56,7 @@
                     >UI Faces</a
                 >
             </div>
+            <!-- ---------------------------------------------- SVG ------------------>
             <h2 class="content-title">svg & illustration</h2>
             <div class="box">
                 <a href="https://undraw.co/illustrations" target="_blank"
@@ -103,6 +104,15 @@
                     >paaatterns</a
                 >
                 <a href="https://iradesign.io/" target="_blank">iradesign</a>
+                <a href="https://www.freeillustrations.xyz" target="_blank"
+                    >free illustrations</a
+                >
+                <a href="https://www.vector4free.com/" target="_blank"
+                    >vector 4 free</a
+                >
+                <a href="https://themeisle.com/illustrations" target="_blank"
+                    >themeisle</a
+                >
                 <a href="https://www.manypixels.co/" target="_blank"
                     >manypixelsf</a
                 >

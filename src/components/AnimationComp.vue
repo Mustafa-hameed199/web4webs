@@ -49,6 +49,13 @@
                     target="_blank"
                     >magic CSS</a
                 >
+                <a href="https://jonsuh.com/hamburgers/" target="_blank"
+                    >hamburgers</a
+                >
+                <a href="https://animxyz.com/" target="_blank">animxyz</a>
+                <a href="https://tilomitra.github.io/infinite/" target="_blank"
+                    >infinite</a
+                >
                 <a href="https://angrytools.com/" target="_blank">angrytools</a>
                 <!-- js -->
                 <a href="http://anijs.github.io/" target="_blank">anijs</a>

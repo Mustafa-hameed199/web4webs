@@ -15,6 +15,7 @@ import UsefulWeb from "../views/UsefulWeb.vue";
 import WebInspire from "../views/WebInspire.vue";
 import Hosting from "../views/Hosting.vue";
 import RemoteJob from "../views/RemoteJob.vue";
+import Cheatsheet from "../views/Cheatsheet.vue";
 
 Vue.use(VueRouter);
 
@@ -93,6 +94,11 @@ const routes = [
         path: "/remote_job",
         name: "RemoteJob",
         component: RemoteJob,
+    },
+    {
+        path: "/cheatsheet",
+        name: "Cheatsheet",
+        component: Cheatsheet,
     },
 ];
 
