@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Pages  ~~~~~~~~~~~~~~~~~ -->
-        <Loader />
         <Links />
         <transition name="fade-in" mode="out-in">
             <router-view />
@@ -11,7 +10,6 @@
     </div>
 </template>
 <script>
-import Loader from "./views/Loader.vue";
 import Links from "./components/HeaderComp.vue";
 import Footer from "./views/Footer";
 
@@ -20,7 +18,6 @@ export default {
     components: {
         Links,
         Footer,
-        Loader,
     },
 };
 </script>
